@@ -365,6 +365,17 @@ header .nav__logo:hover {
 header .nav__menu {
   display: none;
 }
+header .nav__list {
+  display: flex;
+  text-transform: uppercase;
+  list-style-type: none;
+  width: 45%;
+  justify-content: space-between;
+}
+header .nav__list_item-link {
+  text-decoration: none;
+  color: #fff;
+}
 
 @media only screen and (max-width: 768px) {
   header {

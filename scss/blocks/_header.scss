@@ -1,58 +1,70 @@
-header{
-   padding: 20px;
-   box-shadow: 0 1px 10px 0px silver;
-   background-color: $bg-main-color;
-   color: $mian-text-color;
+header {
+  padding: 20px;
+  box-shadow: 0 1px 10px 0px silver;
+  background-color: $bg-main-color;
+  color: $mian-text-color;
 
-   .nav{
+  .nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    &__logo {
+      color: #fff;
+      cursor: pointer;
+
+      &:hover {
+        color: yellow;
+      }
+    }
+    &__menu {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      text-transform: uppercase;
+      list-style-type: none;
+      width: 45%;
+      justify-content: space-between;
+      &_item {
+        &-link {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 20px;
+    box-shadow: 0 1px 10px 0px silver;
+    background-color: seagreen;
+    .nav {
       display: flex;
       width: 100%;
       justify-content: space-between;
-
-      &__logo{
-         color:#fff;
-         cursor: pointer;
-
-         &:hover{
-            color: yellow;
-         }
+      &__menu {
+        display: block;
       }
-      &__menu{
-         display: none;
-      }
-   }
+    }
+  }
 }
 
-@media only screen and (max-width: 768px){
-   header{
-      padding: 20px;
-      box-shadow: 0 1px 10px 0px silver;
-   background-color: seagreen;
-      .nav{
-         display: flex;
-         width: 100%;
-         justify-content: space-between;
-         &__menu{
-            display: block;
-         }
+@media only screen and (max-width: 576px) {
+  header {
+    padding: 20px;
+    box-shadow: 0 1px 10px 0px silver;
+    background-color: rgb(136, 12, 164);
+    .nav {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      &__menu {
+        display: block;
       }
-   }
-   
-}
-
-@media only screen and (max-width: 576px){
-   header{
-      padding: 20px;
-      box-shadow: 0 1px 10px 0px silver;
-   background-color: rgb(136, 12, 164);
-      .nav{
-         display: flex;
-         width: 100%;
-         justify-content: space-between;
-         &__menu{
-            display: block;
-         }
-      }
-   }
-   
+    }
+  }
 }
